@@ -24,8 +24,19 @@ class ViewController: UIViewController {
 
     @IBAction func switchLightButtonPressed() {
         switchLightButton.setTitle("NEXT", for: .normal)
-        redView.alpha = 1
-        
+
+        if redView.alpha == 1 {
+            yellowView.alpha = 1
+            redView.alpha = 0.3
+        } else if yellowView.alpha == 1 {
+            greenView.alpha = 1
+            yellowView.alpha = 0.3
+        } else if greenView.alpha == 1 {
+            greenView.alpha = 0.3
+            redView.alpha = 1
+        } else {
+            redView.alpha = 1
+        }
     }
     
 }
