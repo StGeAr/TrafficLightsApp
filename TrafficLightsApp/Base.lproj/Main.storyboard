@@ -17,40 +17,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFo-b9-CN9">
-                                <rect key="frame" x="143" y="114" width="140" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GkF-os-x8k">
-                                <rect key="frame" x="143" y="269" width="140" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LOi-lr-Gyj">
-                                <rect key="frame" x="143" y="427" width="140" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rws-Al-PD4">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="3Ng-8r-vwP">
+                                <rect key="frame" x="144" y="114" width="140" height="468"/>
+                                <subviews>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFo-b9-CN9">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="ccA-x5-XFa"/>
+                                            <constraint firstAttribute="height" constant="140" id="cyH-9V-0hW"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GkF-os-x8k">
+                                        <rect key="frame" x="0.0" y="164" width="140" height="140"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="1FS-Mg-DQU"/>
+                                            <constraint firstAttribute="width" constant="140" id="x8s-5c-fXX"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOi-lr-Gyj">
+                                        <rect key="frame" x="0.0" y="328" width="140" height="140"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="dPd-7m-QJH"/>
+                                            <constraint firstAttribute="height" constant="140" id="nO1-wO-Pwe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GkF-os-x8k" firstAttribute="centerY" secondItem="3Ng-8r-vwP" secondAttribute="centerY" id="3nL-OB-YdE"/>
+                                    <constraint firstItem="GkF-os-x8k" firstAttribute="top" secondItem="3Ng-8r-vwP" secondAttribute="top" constant="164" id="tsq-SH-3H5"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rws-Al-PD4">
                                 <rect key="frame" x="114" y="741" width="200" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="NNX-tv-COs"/>
+                                    <constraint firstAttribute="height" constant="45" id="pgF-bu-UkQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="switchLightButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="d2W-zA-T0P"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rws-Al-PD4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a5H-El-kSy"/>
+                            <constraint firstItem="3Ng-8r-vwP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5L9-4d-S48"/>
+                            <constraint firstItem="rws-Al-PD4" firstAttribute="centerX" secondItem="3Ng-8r-vwP" secondAttribute="centerX" id="OSR-fi-gs7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rws-Al-PD4" secondAttribute="bottom" constant="106" id="aT3-6N-H6Q"/>
+                            <constraint firstItem="3Ng-8r-vwP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="oOW-lP-gUb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="LOi-lr-Gyj" id="5r8-iA-Cb2"/>
+                        <outlet property="redView" destination="gFo-b9-CN9" id="Qvp-dn-9My"/>
+                        <outlet property="switchLightButton" destination="rws-Al-PD4" id="DGg-MS-PEc"/>
+                        <outlet property="yellowView" destination="GkF-os-x8k" id="uwm-2G-5Dy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
