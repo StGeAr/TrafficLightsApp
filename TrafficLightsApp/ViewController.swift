@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        redView.layer.cornerRadius = 70
-        yellowView.layer.cornerRadius = 70
-        greenView.layer.cornerRadius = 70
+        redView.layer.cornerRadius = redView.frame.width / 2
+        yellowView.layer.cornerRadius = yellowView.frame.width / 2
+        greenView.layer.cornerRadius = greenView.frame.width / 2
         switchLightButton.layer.cornerRadius = 10
     }
 

@@ -71,7 +71,8 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3Ng-8r-vwP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5L9-4d-S48"/>
-                            <constraint firstItem="rws-Al-PD4" firstAttribute="centerX" secondItem="3Ng-8r-vwP" secondAttribute="centerX" id="OSR-fi-gs7"/>
+                            <constraint firstItem="rws-Al-PD4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7ux-Uk-G8j"/>
+                            <constraint firstItem="rws-Al-PD4" firstAttribute="top" secondItem="3Ng-8r-vwP" secondAttribute="bottom" constant="159" id="a9W-z6-t9z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rws-Al-PD4" secondAttribute="bottom" constant="106" id="aT3-6N-H6Q"/>
                             <constraint firstItem="3Ng-8r-vwP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="oOW-lP-gUb"/>
                         </constraints>
